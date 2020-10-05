@@ -15,10 +15,16 @@
     margin-bottom: .1rem;
 }
 
+#home a {
+    text-decoration: none;
+}
 #home h1 {
     font-size: 3.6rem;
     margin-bottom: .2rem;
     color: hsl(0, 0%, 10%)
+}
+#home h1:hover {
+    color: rgb(26, 153, 130);
 }
 
 #home p {
@@ -167,7 +173,7 @@
 }
 
 #section #form-wrapper form div label span {
-    color: hsl(0, 0%, 66%);
+    color: hsl(0, 1%, 35%);
     font-size: 0.8rem;
 }
 
@@ -224,6 +230,7 @@
     border: 1px solid hsl(0, 0%, 78%);
     width: 26rem;
     margin-top: 1rem;
+    text-transform: capitalize;
 }
 
 #section-aside h1 {
