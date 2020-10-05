@@ -10,6 +10,7 @@ import Personal from './pages/Personal';
 import Certificates from './pages/Certificates';
 import Result from './pages/Result';
 import Privacy from './pages/Privacy';
+import PageNotFound from './pages/PageNotFound';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/s/certificates" component={ Certificates }/>
           <Route exact path="/s/result" component={ Result }/>
           <Route exact path="/privacy-policy" component={ Privacy }/>
+          <Route path="*" component={ PageNotFound }/>
         </Switch>
     </BrowserRouter>
   );
