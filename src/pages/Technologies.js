@@ -4,7 +4,7 @@ import { renderToString } from 'react-dom/server';
 import Navigation from '../components/Navigation';
 import useLocalStorage from '../scripts/localStorageData';
 
-function Technologies() {
+function Technologies() {           //This function defined the constants, used to store the value of technologies used by the user
     const [valueTechnologies, setValueTechnologies] = useLocalStorage(
         'technologiesValueStored'
     );
@@ -31,7 +31,7 @@ function Technologies() {
     const svgImageTechnologiesString = renderToString(svgImageTechnologies)
     localStorage.setItem('svgImageTechnologiesStored', svgImageTechnologiesString)
 
-    return (
+    return (              //This will stop the Execution of the funcion and execute the lines define under this return function// 
         <>
             <Navigation/>
             <div id="section-wrapper">
@@ -62,4 +62,4 @@ function Technologies() {
     );
 }
 
-export default Technologies;
+export default Technologies;             //Exporting this function for further use

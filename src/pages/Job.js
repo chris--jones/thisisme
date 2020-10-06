@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import useLocalStorage from '../scripts/localStorageData';
 
-function Job() {
+function Job() {                       //Defining the function Job in which all the constant defined which uses to store the values of User's Jobs Information 
     const [valueJobCompany1, setValueJobCompany1] = useLocalStorage(
         'jobCompanyValueStored1'
     );
@@ -64,7 +64,7 @@ function Job() {
     const [checked, setChecked] = useState(false);
     const jobTextMore = (checked === true) ? <text x="420" y="44" fill="#2F80ED" fontFamily="Segoe UI" fontWeight="700" fontSize="12px">+ more</text> : null;
 
-    const svgImageJob = (
+    const svgImageJob = (                             //Positon of header and text fields
         <svg width="495" height={imgHeight} viewBox={`0 0 495 ${imgHeight}`} fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="99%" height="99%" rx="4.5" fill="#FFFEFE" stroke="#E4E2E2"/>
             {headerTextJob}
@@ -87,7 +87,7 @@ function Job() {
     const [form, changeForm] = useState(false);
     const toggleForm = () => changeForm(!form);
 
-    const jobForm1 = (
+    const jobForm1 = (           //Takes the information of first Job in the html Form 
         <form>
             <p className="currentform-text">current form: 1</p>
             <div>
@@ -105,7 +105,7 @@ function Job() {
         </form>
     );
 
-    const jobForm2 = (
+    const jobForm2 = (                //Takes the information of Second Job in the html Form 
         <form>
             <p className="currentform-text">current form: 2</p>
             <div>
@@ -123,7 +123,7 @@ function Job() {
         </form>
     );
 
-    return (
+    return (            // This will stop the Execution of the funcion and execute the lines define under this return function// 
         <>
             <Navigation/>
             <div id="section-wrapper">
@@ -151,4 +151,4 @@ function Job() {
     );
 }
 
-export default Job;
+export default Job;         //Exporting this function for further use

@@ -4,7 +4,7 @@ import { renderToString } from 'react-dom/server';
 import Navigation from '../components/Navigation';
 import useLocalStorage from '../scripts/localStorageData';
 
-function Programming() {
+function Programming() {             //Defining the function Programming in which all the constants defined which takes the information about user's Prgramming skill
     const [valueProgramming, setValueProgramming] = useLocalStorage(
         'programmingValueStored'
     );
@@ -24,7 +24,7 @@ function Programming() {
     const svgImageProgrammingString = renderToString(svgImageProgramming)
     localStorage.setItem('svgImageProgrammingStored', svgImageProgrammingString)
     
-    return (
+    return (         // This will stop the Execution of the funcion and execute the lines define under this return function// 
         <>
             <Navigation/>
             <div id="section-wrapper">
@@ -55,4 +55,4 @@ function Programming() {
     );
 }
 
-export default Programming;
+export default Programming;           //Exporting this function for further use
