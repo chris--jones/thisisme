@@ -42,10 +42,10 @@ function Personal() {             //Defining the function Personal in which all 
     return (      // This will stop the Execution of the funcion and execute the lines define under this return function// 
         <>
             <Navigation/>
-            <div id="section-wrapper">
+            <div className="section-wrapper">
                 <div>
-                    <section id="section">
-                        <div id="form-wrapper">
+                    <section className="section">
+                        <div className="form-wrapper">
                             <form>
                                 <div>
                                     <label htmlFor="fullnameValue">My full name</label><br/>
@@ -62,12 +62,12 @@ function Personal() {             //Defining the function Personal in which all 
                             </form>
                         </div>
                     </section>
-                    <aside id="section-aside">
+                    <aside className="section-aside">
                         <h1>Notes:</h1>
                         <p><span>*</span> all inputs are optional.<br/><span>*</span> comma separated example: English, French, ...<br/><span>*</span> for information about data, see <Link to="/privacy-policy">Privacy Policy</Link>.</p>
                     </aside>
                 </div>
-                <div id="svg-wrapper">
+                <div className="svg-wrapper">
                     {svgImagePersonal}
                     <p id="preview-text">preview</p>
                 </div>

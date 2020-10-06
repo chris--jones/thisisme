@@ -27,10 +27,10 @@ function Programming() {             //Defining the function Programming in whic
     return (         // This will stop the Execution of the funcion and execute the lines define under this return function// 
         <>
             <Navigation/>
-            <div id="section-wrapper">
-                <div>
-                    <section id="section">
-                        <div id="form-wrapper">
+            <div className="section-wrapper">
+                <div className="center">
+                    <section className="section">
+                        <div className="form-wrapper">
                             <form>
                                 <div>
                                     <label htmlFor="programming">Programming languages I code in <span>(comma separated)</span></label><br/>
@@ -39,12 +39,12 @@ function Programming() {             //Defining the function Programming in whic
                             </form>
                         </div>
                     </section>
-                    <aside id="section-aside">
+                    <aside className="section-aside">
                         <h1>Notes:</h1>
                         <p><span>*</span> all inputs are optional.<br/><span>*</span> comma separated example: JavaScript, Ruby, ...<br/><span>*</span> non-programming languages are also included (eg. HTML).<br/><span>*</span> for information about data, see <Link to="/privacy-policy">Privacy Policy</Link>.</p>
                     </aside>
                 </div>
-                <div>
+                <div className="svg-wrapper">
                     <svg width="495" height={imgHeight} viewBox={`0 0 495 ${imgHeight}`} fill="none" xmlns="http://www.w3.org/2000/svg">
                         {svgImageProgramming}
                     </svg>

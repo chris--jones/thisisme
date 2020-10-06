@@ -53,8 +53,10 @@ function Result() {                //Defining the Result function which shows th
                 {parse(svgImageProgrammingPassedClean)}
                 {parse(svgImageTechnologiesPassedClean)}
                 </svg>
-                <button id="download-button" data-type="svg" onClick={download}>Download SVG</button>
-                <button id="download-button" data-type="png" onClick={download}>Download PNG</button>
+                <div className="button-group">
+                <button className="download-button" data-type="svg" onClick={download}>Download SVG</button>
+                <button className="download-button" data-type="png" onClick={download}>Download PNG</button>
+                </div>
             </div>
         </>
     );
