@@ -56,6 +56,38 @@ npm run start
 npm run test
 ```
 
+## 🐳 Run through Docker
+
+First clone this repository:
+```sh
+git clone https://github.com/JoseDeFreitas/thisisme.git
+cd thisisme
+```
+
+### Execute the command:
+```sh
+docker-compose up
+```
+
+### Start the project locally to see it in action.
+
+```sh
+- localhost 
+OR 
+- 0.0.0.0
+```
+
+### Access the portainer to see the logs:
+```sh
+- localhost:9000
+OR 
+- 0.0.0.0:9000
+```
+Do the follow steps to use the Portainer:
+1. You'll need to create a password for local admin account.
+2. Choose the option: "**Docker** *manage the local Docker environment*".
+3. Done, you're now able to manage the containers.
+
 ## 👤 Author
 
 **José De Freitas**
