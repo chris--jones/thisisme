@@ -178,10 +178,10 @@ function Certificates()                          //Creating the funtion which ge
     return (                                             //This will stop the Execution of the funcion and execute the lines define under this return function// 
         <>
             <Navigation/>
-            <div id="section-wrapper">
-                <div>
-                    <section id="section">
-                        <div id="form-wrapper">
+            <div className="section-wrapper">
+                <div className="center">
+                    <section className="section">
+                        <div className="form-wrapper">
                             {(form === 0) ? certificatesForm1 : (form === 1) ? certificatesForm2 : (form === 2) ? certificatesForm3 : null}
                             <button id="toggle-button" onClick={toggleForm}>Toggle form</button>
                             <input id="more-button" type="checkbox" onChange={() => setChecked(!checked)}></input>
@@ -189,12 +189,12 @@ function Certificates()                          //Creating the funtion which ge
                             <p>check the checkbox to let people know there's more information.</p>
                         </div>
                     </section>
-                    <aside id="section-aside">
+                    <aside className="section-aside">
                         <h1>Notes:</h1>
                         <p><span>*</span> all inputs are optional.<br/><span>*</span> if necessary, type the name of the organization in the title.<br/><span>*</span> for information about data, see <Link to="/privacy-policy">Privacy Policy</Link>.</p>
                     </aside>
                 </div>
-                <div>
+                <div className="svg-wrapper">
                     {svgImageCertificates}
                     <p id="preview-text">preview <span>- you can edit the layout in the <Link to="/s/result">Result</Link> section.</span></p>
                 </div>
