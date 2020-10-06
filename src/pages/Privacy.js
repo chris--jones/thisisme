@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 
-function Privacy() {
+function Privacy() {        //Funtion stated the Privacy Policy for the App
     return (
         <div id="privacy-policy">
             <Link id="return-button" to="/">Return home</Link>
@@ -19,4 +19,4 @@ function Privacy() {
     );
 }
 
-export default Privacy;
+export default Privacy;             //Exporting this function for further use

@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import useLocalStorage from '../scripts/localStorageData';
 
-function Education() {
+function Education()  //Defining the function Education in which all the constant defined which uses to store the values of User's Education Information 
+{ 
     const [valueEducationName1, setValueEducationName1] = useLocalStorage(
         'educationNameValueStored1'
     );
@@ -87,7 +88,8 @@ function Education() {
     const [form, changeForm] = useState(false);
     const toggleForm = () => changeForm(!form);
 
-    const educationForm1 = (
+    const educationForm1 =                                     //Set the values of respective field of education in html Form 
+    (
         <form>
             <p className="currentform-text">current form: 1</p>
             <div>
@@ -105,7 +107,7 @@ function Education() {
         </form>
     );
 
-    const educationForm2 = (
+    const educationForm2 = (                                       //Set the values of respective field of education in html Form
         <form>
             <p className="currentform-text">current form: 2</p>
             <div>
@@ -123,7 +125,7 @@ function Education() {
         </form>
     );
 
-    return (
+    return (                                        //This will stop the Execution of the funcion and execute the lines define under this return function// 
         <>
             <Navigation/>
             <div id="section-wrapper">
@@ -151,4 +153,4 @@ function Education() {
     );
 }
 
-export default Education;
+export default Education;                    //Exporting the live binding of this funtion for further use

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import useLocalStorage from '../scripts/localStorageData';
 
-function Personal() {
+function Personal() {             //Defining the function Personal in which all the constant defined which uses to store the values of User's Personal Information 
     const [valuePersonalFullname, setValuePersonalFullname] = useLocalStorage(
         'personalFullnameValueStored'
     );
@@ -30,7 +30,7 @@ function Personal() {
 
     const imgHeight = (valuePersonalFullname === '' && valuePersonalLanguages === '' && valuePersonalHobbies === '') ? 26 : (valuePersonalFullname === '' && valuePersonalLanguages === '') || (valuePersonalFullname === '' && valuePersonalHobbies === '') || (valuePersonalLanguages === '' && valuePersonalHobbies === '') ? 82 : (valuePersonalFullname === '' || valuePersonalLanguages === '' || valuePersonalHobbies === '') ? 138 : 194;
 
-    const svgImagePersonal = (
+    const svgImagePersonal = (              //Positon of header and text fields
         <svg width="495" height={imgHeight} viewBox={`0 0 495 ${imgHeight}`} fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="99%" height="99%" rx="4.5" fill="#FFFEFE" stroke="#E4E2E2"/>
             {personalFullnameText}
@@ -39,7 +39,7 @@ function Personal() {
         </svg>
     );
 
-    return (
+    return (      // This will stop the Execution of the funcion and execute the lines define under this return function// 
         <>
             <Navigation/>
             <div id="section-wrapper">
@@ -76,4 +76,4 @@ function Personal() {
     );
 }
 
-export default Personal;
+export default Personal;      //Exporting this function for further use

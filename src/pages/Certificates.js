@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import useLocalStorage from '../scripts/localStorageData';
 
-function Certificates() {
+function Certificates()                          //Creating the funtion which generate the Certificates of the user which takes all the values as constant   
+{
     const [valueCertificatesTitle1, setValueCertificatesTitle1] = useLocalStorage(
         'certificatesTitleValueStored1'
     );
@@ -91,7 +92,7 @@ function Certificates() {
     const [checked, setChecked] = useState(false);
     const certificatesTextMore = (checked === true) ? <text x="420" y="44" fill="#2F80ED" fontFamily="Segoe UI" fontWeight="700" fontSize="12px">+ more</text> : null;
 
-    const svgImageCertificates = (
+    const svgImageCertificates = (                                         //Set the positions of the Certificates
         <svg width="495" height={imgHeight} viewBox={`0 0 495 ${imgHeight}`} fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="99%" height="99%" rx="4.5" fill="#FFFEFE" stroke="#E4E2E2"/>
             {headerTextCertificates}
@@ -117,10 +118,10 @@ function Certificates() {
          </svg>
     );
 
-    const [form, setForm] = useState(0);
+    const [form, setForm] = useState(0);                                 
     const toggleForm = () => (form === 0) ? setForm(1) : (form === 1) ? setForm(2) : (form === 2) ? setForm(0) : null;
 
-    const certificatesForm1 = (
+    const certificatesForm1 = (                           //Takes the information of certificate in the Form 
         <form>
             <p className="currentform-text">current form: 1</p>
             <div>
@@ -138,7 +139,7 @@ function Certificates() {
         </form>
     );
 
-    const certificatesForm2 = (
+    const certificatesForm2 = (                                          //Takes the information of second Certificate
         <form>
             <p className="currentform-text">current form: 2</p>
             <div>
@@ -156,7 +157,7 @@ function Certificates() {
         </form>
     );
 
-    const certificatesForm3 = (
+    const certificatesForm3 = (                                        //Takes the information of Third Certificates
         <form>
             <p className="currentform-text">current form: 3</p>
             <div>
@@ -174,7 +175,7 @@ function Certificates() {
         </form>
     );
 
-    return (
+    return (                                             //This will stop the Execution of the funcion and execute the lines define under this return function// 
         <>
             <Navigation/>
             <div id="section-wrapper">
@@ -202,4 +203,4 @@ function Certificates() {
     );
 }
 
-export default Certificates;
+export default Certificates;      //Exporting this function for further use

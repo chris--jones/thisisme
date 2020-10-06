@@ -3,7 +3,7 @@ import Navigation from '../components/Navigation';
 import parse from 'html-react-parser';
 import DOMPurify from 'dompurify';
 
-function Result() {
+function Result() {                //Defining the Result function which shows the Result of this app 
     const width = 900;
     const height = 192;
 
@@ -45,7 +45,7 @@ function Result() {
         a.remove();
     }
 
-    return (
+    return (              // This will stop the Execution of the funcion and execute the lines define under this return function// 
         <>
             <Navigation/>
             <div id="result">
@@ -60,4 +60,4 @@ function Result() {
     );
 }
 
-export default Result;
+export default Result;              //Exporting this function for further use
