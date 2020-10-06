@@ -130,6 +130,49 @@
 
 /* PAGES */
 
+/* PAGE NOT FOUND */
+
+#error-container{
+    position : fixed;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+    padding : 1rem;
+    width : 60%;
+}
+
+#error-container #error-status-code {
+    font-size : 72px;
+}
+
+#error-container #error-title{
+    margin-bottom : 10px;
+    font-size : 24px;
+}
+
+#error-container #error-content{
+    font-size : 18px;
+    margin-bottom : 10px;
+}
+
+#error-container #home-button{
+    background-color: hsl(219, 86%, 57%);
+    padding: .6rem 1.6rem;
+    border-radius: .5rem;
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: box-shadow 250ms;
+    display : inline-block;
+}
+
+#error-container #home-button:hover{
+    box-shadow: 0px 5px 8px 3px rgba(0,0,0,0.2);
+    border: 1px solid transparent;
+}
+
+
 /* SECTION */
 
 #section-wrapper {
