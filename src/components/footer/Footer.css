@@ -1,0 +1,25 @@
+#footer {
+    position: fixed;
+    bottom: 0;
+}
+
+#footer > ul {
+    margin-bottom: 1.5rem;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+#footer > ul li {
+    margin-right: .7rem;
+}
+#footer > ul li:last-child {
+    margin-right: 0;
+}
+
+#footer > ul li a {
+    text-decoration: none;
+    color: hsl(219, 86%, 57%);
+}
+#footer > ul li a:hover {
+    text-decoration: underline;
+}
