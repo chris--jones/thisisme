@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../../components/navigation/Navigation';
 import useLocalStorage from '../../scripts/localStorageData';
-import "./Personal.css";
+import "./Personal.scss";
 
 function Personal() {             //Defining the function Personal in which all the constant defined which uses to store the values of User's Personal Information 
     const [valuePersonalFullname, setValuePersonalFullname] = useLocalStorage(

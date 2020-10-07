@@ -1,0 +1,23 @@
+#footer {
+	position: fixed;
+	bottom: 0;
+	>ul {
+		margin-bottom: 1.5rem;
+		list-style-type: none;
+		display: flex;
+		flex-direction: row;
+		li {
+			margin-right: .7rem;
+			&:last-child {
+				margin-right: 0;
+			}
+			a {
+				text-decoration: none;
+				color: hsl(219, 86%, 57%);
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

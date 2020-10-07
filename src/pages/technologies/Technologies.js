@@ -3,7 +3,7 @@ import { Link, /* useLocation */ } from 'react-router-dom';
 import { renderToString } from 'react-dom/server';
 import Navigation from '../../components/navigation/Navigation';
 import useLocalStorage from '../../scripts/localStorageData';
-import "./Technologies.css";
+import "./Technologies.scss";
 
 function Technologies() {           //This function defined the constants, used to store the value of technologies used by the user
     const [valueTechnologies, setValueTechnologies] = useLocalStorage(

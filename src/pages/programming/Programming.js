@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { renderToString } from 'react-dom/server';
 import Navigation from '../../components/navigation/Navigation';
 import useLocalStorage from '../../scripts/localStorageData';
-import "./Programming.css";
+import "./Programming.scss";
 
 function Programming() {             //Defining the function Programming in which all the constants defined which takes the information about user's Prgramming skill
     const [valueProgramming, setValueProgramming] = useLocalStorage(

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../../components/navigation/Navigation';
 import useLocalStorage from '../../scripts/localStorageData';
-import "./Job.css";
+import "./Job.scss";
 
 function Job() {                       //Defining the function Job in which all the constant defined which uses to store the values of User's Jobs Information 
     const [valueJobCompany1, setValueJobCompany1] = useLocalStorage(
