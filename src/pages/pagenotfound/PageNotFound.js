@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import "./PageNotFound.css";
+
 function PageNotFound(){      //Function for Page Error
     return (
         <div id="error-container">

@@ -1,16 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home';
-import Programming from './pages/Programming';
-import Technologies from './pages/Technologies';
-import Education from './pages/Education';
-import Job from './pages/Job';
-import Personal from './pages/Personal';
-import Certificates from './pages/Certificates';
-import Result from './pages/Result';
-import Privacy from './pages/Privacy';
-import PageNotFound from './pages/PageNotFound';
+import Home from './pages/home/Home';
+import Programming from './pages/programming/Programming';
+import Technologies from './pages/technologies/Technologies';
+import Education from './pages/education/Education';
+import Job from './pages/job/Job';
+import Personal from './pages/personal/Personal';
+import Certificates from './pages/certificates/Certificates';
+import Result from './pages/result/Result';
+import Privacy from './pages/privacy/Privacy';
+import PageNotFound from './pages/pagenotfound/PageNotFound';
 
 function App() {
   return (

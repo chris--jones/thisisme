@@ -1,7 +1,8 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
+import Navigation from '../../components/navigation/Navigation';
 import parse from 'html-react-parser';
 import DOMPurify from 'dompurify';
+import "./Result.css";
 
 function Result() {                //Defining the Result function which shows the Result of this app 
     const width = 900;

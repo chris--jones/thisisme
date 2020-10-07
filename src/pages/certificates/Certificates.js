@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import useLocalStorage from '../scripts/localStorageData';
+import Navigation from '../../components/navigation/Navigation';
+import useLocalStorage from '../../scripts/localStorageData';
+import "./Certificates.css";
 
 function Certificates()                          //Creating the funtion which generate the Certificates of the user which takes all the values as constant   
 {
