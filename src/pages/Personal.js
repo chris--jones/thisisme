@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { renderToString } from 'react-dom/server';
 import Navigation from '../components/Navigation';
 import useLocalStorage from '../scripts/localStorageData';
 
@@ -32,39 +33,43 @@ function Personal() {
 
     const svgImagePersonal = (
         <svg width="495" height={imgHeight} viewBox={`0 0 495 ${imgHeight}`} fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.5" y="0.5" width="99%" height="99%" rx="4.5" fill="#FFFEFE" stroke="#E4E2E2"/>
+            <rect x="0.5" y="0.5" width="99%" height="99%" rx="4.5" fill="#FFFEFE" stroke="#E4E2E2" />
             {personalFullnameText}
             {personalLanguagesText}
             {personalHobbiesText}
         </svg>
     );
 
+    const svgImagePersonalString = renderToString(svgImagePersonal);
+    localStorage.setItem('svgImagePersonalStored', svgImagePersonalString);
+
+
     return (
         <>
-            <Navigation/>
+            <Navigation />
             <div id="section-wrapper">
                 <div>
                     <section id="section">
                         <div id="form-wrapper">
                             <form>
                                 <div>
-                                    <label htmlFor="fullnameValue">My full name</label><br/>
-                                    <input onChange={valueChangePersonalFullname} value={valuePersonalFullname} type="text" id="fullnameValue" name="fullnameValue" minLength="0" maxLength="40"/>
+                                    <label htmlFor="fullnameValue">My full name</label><br />
+                                    <input onChange={valueChangePersonalFullname} value={valuePersonalFullname} type="text" id="fullnameValue" name="fullnameValue" minLength="0" maxLength="40" />
                                 </div>
                                 <div>
-                                    <label htmlFor="languagesValue">Languages I speak <span>(comma separated)</span></label><br/>
-                                    <input onChange={valueChangePersonalLanguages} value={valuePersonalLanguages} type="text" id="languagesValue" name="languagesValue" minLength="0" maxLength="40"/>
+                                    <label htmlFor="languagesValue">Languages I speak <span>(comma separated)</span></label><br />
+                                    <input onChange={valueChangePersonalLanguages} value={valuePersonalLanguages} type="text" id="languagesValue" name="languagesValue" minLength="0" maxLength="40" />
                                 </div>
                                 <div>
-                                    <label htmlFor="hobbiesValue">My hobbies <span>(comma separated)</span></label><br/>
-                                    <input onChange={valueChangePersonalHobbies} value={valuePersonalHobbies} type="text" id="hobbiesValue" name="hobbiesValue" minLength="0" maxLength="40"/>
+                                    <label htmlFor="hobbiesValue">My hobbies <span>(comma separated)</span></label><br />
+                                    <input onChange={valueChangePersonalHobbies} value={valuePersonalHobbies} type="text" id="hobbiesValue" name="hobbiesValue" minLength="0" maxLength="40" />
                                 </div>
                             </form>
                         </div>
                     </section>
                     <aside id="section-aside">
                         <h1>Notes:</h1>
-                        <p><span>*</span> all inputs are optional.<br/><span>*</span> comma separated example: English, French, ...<br/><span>*</span> for information about data, see <Link to="/privacy-policy">Privacy Policy</Link>.</p>
+                        <p><span>*</span> all inputs are optional.<br /><span>*</span> comma separated example: English, French, ...<br /><span>*</span> for information about data, see <Link to="/privacy-policy">Privacy Policy</Link>.</p>
                     </aside>
                 </div>
                 <div id="svg-wrapper">
