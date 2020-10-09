@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../../components/navigation/Navigation';
 import useLocalStorage from '../../scripts/localStorageData';
-import "./Certificates.css";
+import "./Certificates.scss";
 
 function Certificates() { //Creating the funtion which generate the Certificates of the user which takes all the values as constant
     const [valueCertificatesTitle1, setValueCertificatesTitle1] = useLocalStorage(

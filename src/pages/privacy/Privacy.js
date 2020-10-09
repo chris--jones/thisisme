@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../../components/footer/Footer';
-import "./Privacy.css"
+import "./Privacy.scss"
 
 function Privacy() { //Funtion stated the Privacy Policy for the App
     return (

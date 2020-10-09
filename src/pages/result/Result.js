@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from '../../components/navigation/Navigation';
 import parse from 'html-react-parser';
 import DOMPurify from 'dompurify';
-import "./Result.css";
+import "./Result.scss";
 
 function Result() {
     let svgImages = [];

@@ -1,0 +1,23 @@
+#privacy-policy {
+	margin: 2rem auto;
+	width: 50%;
+	a {
+		text-decoration: none;
+		color: hsl(219, 86%, 57%);
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	>h1 {
+		margin-bottom: .8rem;
+		margin-top: .4rem;
+	}
+	#footer {
+		position: initial;
+		margin-top: 2rem;
+	}
+}
+h2 {
+	margin-bottom: .8rem;
+	margin-top: .4rem;
+}

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../../components/navigation/Navigation';
 import useLocalStorage from '../../scripts/localStorageData';
-import "./Education.css";
+import "./Education.scss";
 
 function Education() //Defining the function Education in which all the constant defined which uses to store the values of User's Education Information
 { 
