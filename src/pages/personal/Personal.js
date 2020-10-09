@@ -4,7 +4,7 @@ import { renderToString } from 'react-dom/server';
 import Navigation from '../../components/navigation/Navigation';
 import useLocalStorage from '../../scripts/localStorageData';
 
-function Personal() {             //Defining the function Personal in which all the constant defined which uses to store the values of User's Personal Information 
+function Personal() { //Defining the function Personal in which all the constant defined which uses to store the values of User's Personal Information
     const [valuePersonalFullname, setValuePersonalFullname] = useLocalStorage(
         'personalFullnameValueStored'
     );
@@ -31,7 +31,7 @@ function Personal() {             //Defining the function Personal in which all 
 
     const imgHeight = (valuePersonalFullname === '' && valuePersonalLanguages === '' && valuePersonalHobbies === '') ? 26 : (valuePersonalFullname === '' && valuePersonalLanguages === '') || (valuePersonalFullname === '' && valuePersonalHobbies === '') || (valuePersonalLanguages === '' && valuePersonalHobbies === '') ? 82 : (valuePersonalFullname === '' || valuePersonalLanguages === '' || valuePersonalHobbies === '') ? 138 : 194;
 
-    const svgImagePersonal = (              //Positon of header and text fields
+    const svgImagePersonal = ( //Positon of header and text fields
         <svg width="495" height={imgHeight} viewBox={`0 0 495 ${imgHeight}`} fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="99%" height="99%" rx="4.5" fill="#FFFEFE" stroke="#E4E2E2" />
             {personalFullnameText}
@@ -81,4 +81,4 @@ function Personal() {             //Defining the function Personal in which all 
     );
 }
 
-export default Personal;      //Exporting this function for further use
+export default Personal; //Exporting this function for further use

@@ -4,7 +4,7 @@ import Navigation from '../../components/navigation/Navigation';
 import useLocalStorage from '../../scripts/localStorageData';
 import "./Education.css";
 
-function Education()  //Defining the function Education in which all the constant defined which uses to store the values of User's Education Information 
+function Education() //Defining the function Education in which all the constant defined which uses to store the values of User's Education Information
 { 
     const [valueEducationName1, setValueEducationName1] = useLocalStorage(
         'educationNameValueStored1'
@@ -89,8 +89,7 @@ function Education()  //Defining the function Education in which all the constan
     const [form, changeForm] = useState(false);
     const toggleForm = () => changeForm(!form);
 
-    const educationForm1 =                                     //Set the values of respective field of education in html Form 
-    (
+    const educationForm1 = (//Set the values of respective field of education in html Form
         <form>
             <p className="currentform-text">current form: 1</p>
             <div>
@@ -108,7 +107,7 @@ function Education()  //Defining the function Education in which all the constan
         </form>
     );
 
-    const educationForm2 = (                                       //Set the values of respective field of education in html Form
+    const educationForm2 = ( //Set the values of respective field of education in html Form
         <form>
             <p className="currentform-text">current form: 2</p>
             <div>
@@ -126,7 +125,7 @@ function Education()  //Defining the function Education in which all the constan
         </form>
     );
 
-    return (                                        //This will stop the Execution of the funcion and execute the lines define under this return function// 
+    return ( //This will stop the Execution of the funcion and execute the lines define under this return function
         <>
             <Navigation/>
             <div className="section-wrapper">
@@ -154,4 +153,4 @@ function Education()  //Defining the function Education in which all the constan
     );
 }
 
-export default Education;                    //Exporting the live binding of this funtion for further use
+export default Education; //Exporting the live binding of this funtion for further use

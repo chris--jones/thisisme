@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Footer from '../../components/footer/Footer';
 import "./Privacy.css"
 
-function Privacy() {        //Funtion stated the Privacy Policy for the App
+function Privacy() { //Funtion stated the Privacy Policy for the App
     return (
         <div id="privacy-policy">
             <Link id="return-button" to="/">Return home</Link>
@@ -20,4 +20,4 @@ function Privacy() {        //Funtion stated the Privacy Policy for the App
     );
 }
 
-export default Privacy;             //Exporting this function for further use
+export default Privacy; //Exporting this function for further use

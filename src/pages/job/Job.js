@@ -4,7 +4,7 @@ import Navigation from '../../components/navigation/Navigation';
 import useLocalStorage from '../../scripts/localStorageData';
 import "./Job.css";
 
-function Job() {                       //Defining the function Job in which all the constant defined which uses to store the values of User's Jobs Information 
+function Job() { //Defining the function Job in which all the constant defined which uses to store the values of User's Jobs Information
     const [valueJobCompany1, setValueJobCompany1] = useLocalStorage(
         'jobCompanyValueStored1'
     );
@@ -65,7 +65,7 @@ function Job() {                       //Defining the function Job in which all 
     const [checked, setChecked] = useState(false);
     const jobTextMore = (checked === true) ? <text x="420" y="44" fill="#2F80ED" fontFamily="Segoe UI" fontWeight="700" fontSize="12px">+ more</text> : null;
 
-    const svgImageJob = (                             //Positon of header and text fields
+    const svgImageJob = ( //Positon of header and text fields
         <svg width="495" height={imgHeight} viewBox={`0 0 495 ${imgHeight}`} fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="99%" height="99%" rx="4.5" fill="#FFFEFE" stroke="#E4E2E2"/>
             {headerTextJob}
@@ -88,7 +88,7 @@ function Job() {                       //Defining the function Job in which all 
     const [form, changeForm] = useState(false);
     const toggleForm = () => changeForm(!form);
 
-    const jobForm1 = (           //Takes the information of first Job in the html Form 
+    const jobForm1 = ( //Takes the information of first Job in the html Form
         <form>
             <p className="currentform-text">current form: 1</p>
             <div>
@@ -106,7 +106,7 @@ function Job() {                       //Defining the function Job in which all 
         </form>
     );
 
-    const jobForm2 = (                //Takes the information of Second Job in the html Form 
+    const jobForm2 = ( //Takes the information of Second Job in the html Form
         <form>
             <p className="currentform-text">current form: 2</p>
             <div>
@@ -124,7 +124,7 @@ function Job() {                       //Defining the function Job in which all 
         </form>
     );
 
-    return (            // This will stop the Execution of the funcion and execute the lines define under this return function// 
+    return ( //This will stop the Execution of the funcion and execute the lines define under this return function
         <>
             <Navigation/>
             <div className="section-wrapper">
@@ -152,4 +152,4 @@ function Job() {                       //Defining the function Job in which all 
     );
 }
 
-export default Job;         //Exporting this function for further use
+export default Job; //Exporting this function for further use

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import "./PageNotFound.css";
 
-function PageNotFound(){      //Function for Page Error
+function PageNotFound(){ //Function for Page Error
     return (
         <div id="error-container">
             <h1 id="error-status-code">404</h1>
@@ -16,4 +16,4 @@ function PageNotFound(){      //Function for Page Error
     )
 }
 
-export default PageNotFound;          //Exporting this function for further use
+export default PageNotFound; //Exporting this function for further use
