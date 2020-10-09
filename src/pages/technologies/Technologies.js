@@ -18,38 +18,38 @@ function Technologies() {           //This function defined the constants, used 
     const technologiesPositionByLocation = (currentPath == '/s/technologies') ? "0.5" : "50";*/
 
     const svgImageTechnologies = (
-        <svg width="495" height={imgHeight} viewBox={`0 0 495 ${imgHeight}`} fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.5" y="0.5" width="494" height={imgHeight - 1} rx="4.5" fill="#FFFEFE" stroke="#E4E2E2" />
+        <g>
+            <rect x="0.5" y="0.5" width="494" height={imgHeight - 1} rx="4.5" fill="#FFFEFE" stroke="#E4E2E2"/>
             {valueTechnologies !== '' && (
                 <text x="25" y="36">
                     <tspan x="25" y="36" fill="#2F80ED" fontFamily="Segoe UI" fontWeight="600" fontSize="18px">Technologies I use</tspan>
                     <tspan x="25" y="60" fill="#333" fontFamily="Segoe UI" fontWeight="400" fontSize="14px">{valueTechnologies}</tspan>
                 </text>
             )}
-        </svg>
+        </g>
     );
 
     const svgImageTechnologiesString = renderToString(svgImageTechnologies)
     localStorage.setItem('svgImageTechnologiesStored', svgImageTechnologiesString)
 
-    return (
+    return (              //This will stop the Execution of the funcion and execute the lines define under this return function// 
         <>
-            <Navigation />
-            <div id="section-wrapper">
-                <div>
-                    <section id="section">
-                        <div id="form-wrapper">
+            <Navigation/>
+            <div className="section-wrapper">
+                <div className="center">
+                    <section className="section">
+                        <div className="form-wrapper">
                             <form>
                                 <div>
-                                    <label htmlFor="technologies">Technologies I use <span>(comma separated)</span></label><br />
-                                    <input onChange={valueChangeTechnologies} value={valueTechnologies} type="text" id="technologies" name="technologies" minLength="0" maxLength="50" />
+                                    <label htmlFor="technologies">Technologies I use <span>(comma separated)</span></label><br/>
+                                    <input onChange={valueChangeTechnologies} value={valueTechnologies} type="text" id="technologies" name="technologies" minLength="0" maxLength="50"/>
                                 </div>
                             </form>
                         </div>
                     </section>
                     <aside className="section-aside">
                         <h1>Notes:</h1>
-                        <p><span>*</span> all inputs are optional.<br /><span>*</span> comma separated example: Visual Studio Code, React, ...<br /><span>*</span> for information about data, see <Link to="/privacy-policy">Privacy Policy</Link>.</p>
+                        <p><span>*</span> all inputs are optional.<br/><span>*</span> comma separated example: Visual Studio Code, React, ...<br/><span>*</span> for information about data, see <Link to="/privacy-policy">Privacy Policy</Link>.</p>
                     </aside>
                 </div>
                 <div className="svg-wrapper">
