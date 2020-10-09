@@ -77,7 +77,7 @@ OR
 - 0.0.0.0
 ```
 
-### Access the portainer to see the logs:
+### Access the container to see the logs:
 ```sh
 - localhost:9000
 OR 
