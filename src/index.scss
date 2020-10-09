@@ -1,9 +1,11 @@
-body {
-	box-sizing: border-box;
+* {
 	margin: 0;
 	padding: 0;
-	background-color: hsl(0, 0%, 100%);
+	box-sizing: border-box;
 	font-family: Inter, 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif;
+}
+body {
+	background-color: hsl(0, 0%, 100%);
 }
 h1 {
 	margin: 0;

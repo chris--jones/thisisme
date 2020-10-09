@@ -18,7 +18,7 @@
 		margin-bottom: .2rem;
 		color: hsl(0, 0%, 10%);
 		&:hover {
-			color: rgb(26, 153, 130);
+			color: hsl(219, 86%, 57%);
 		}
 	}
 	p {
@@ -31,7 +31,7 @@
 		display: flex;
 		flex-direction: row;
 		#main-button {
-			background-color: hsl(219, 86%, 57%);
+			background-color: hsl(0, 0%, 0%);
 			padding: .6rem 1.6rem;
 			border-radius: .5rem;
 			color: hsl(0, 0%, 100%);
@@ -44,6 +44,7 @@
 			}
 		}
 		#gh-button {
+			background-color: hsl(0, 0%, 0%);
 			display: block;
 			border: 1px solid hsl(0, 0%, 69%);
 			padding: .6rem .6rem .45rem;
