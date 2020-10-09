@@ -28,10 +28,10 @@ function Programming() { //Defining the function Programming in which all the co
     return (
         <>
             <Navigation />
-            <div id="section-wrapper">
-                <div>
-                    <section id="section">
-                        <div id="form-wrapper">
+            <div className="section-wrapper">
+                <div className="center">
+                    <section className="section">
+                        <div className="form-wrapper">
                             <form>
                                 <div>
                                     <label htmlFor="programming">Programming languages I code in <span>(comma separated)</span></label><br />

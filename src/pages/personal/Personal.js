@@ -47,7 +47,7 @@ function Personal() { //Defining the function Personal in which all the constant
     return (
         <>
             <Navigation />
-            <div id="section-wrapper">
+            <div className="section-wrapper">
                 <div>
                     <section className="section">
                         <div className="form-wrapper">

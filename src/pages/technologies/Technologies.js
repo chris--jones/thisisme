@@ -35,10 +35,10 @@ function Technologies() { //This function defined the constants, used to store t
     return (
         <>
             <Navigation />
-            <div id="section-wrapper">
-                <div>
-                    <section id="section">
-                        <div id="form-wrapper">
+            <div className="section-wrapper">
+                <div className="center">
+                    <section className="section">
+                        <div className="form-wrapper">
                             <form>
                                 <div>
                                     <label htmlFor="technologies">Technologies I use <span>(comma separated)</span></label><br />
