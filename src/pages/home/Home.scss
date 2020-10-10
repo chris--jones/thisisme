@@ -12,24 +12,26 @@
 	}
 	a {
 		text-decoration: none;
+		color: hsl(219, 86%, 57%);
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 	h1 {
 		font-size: 3.6rem;
 		margin-bottom: .2rem;
 		color: hsl(0, 0%, 10%);
-		&:hover {
-			color: hsl(219, 86%, 57%);
-		}
 	}
 	p {
 		font-size: 1.4rem;
-		margin-bottom: 1.4rem;
+		margin-bottom: 1.2rem;
 		text-align: center;
 		color: hsl(0, 0%, 20%);
 	}
 	#cta-buttons {
 		display: flex;
 		flex-direction: row;
+		margin-bottom: 1rem;
 		#main-button {
 			background-color: hsl(0, 0%, 0%);
 			padding: .6rem 1.6rem;
@@ -57,5 +59,8 @@
 				border: 1px solid transparent;
 			}
 		}
+	}
+	#hacktoberfest-p {
+		font-size: .75rem;
 	}
 }

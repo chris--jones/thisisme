@@ -69,7 +69,7 @@ function Result() {
         a.remove();
     }
 
-    let personalImg = <SvgCard svgImage={parse(svgImagePersonalPassedClean)} x="500" />;
+    //let personalImg = <SvgCard svgImage={parse(svgImagePersonalPassedClean)} x="500" />;
 
     return (
         <>
