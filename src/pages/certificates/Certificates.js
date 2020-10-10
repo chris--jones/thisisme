@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { renderToString } from 'react-dom/server';
 import Navigation from '../../components/navigation/Navigation';
 import useLocalStorage from '../../scripts/localStorageData';
 import "./Certificates.scss";
@@ -117,6 +118,9 @@ function Certificates() { //Creating the funtion which generate the Certificates
             </g>
          </svg>
     );
+
+    const svgImageCertificatesString = renderToString(svgImageCertificates);
+    localStorage.setItem('svgImageCertificatesStored', svgImageCertificatesString);
 
     const [form, setForm] = useState(0);                                 
     const toggleForm = () => (form === 0) ? setForm(1) : (form === 1) ? setForm(2) : (form === 2) ? setForm(0) : null;

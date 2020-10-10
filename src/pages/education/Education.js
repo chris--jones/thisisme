@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { renderToString } from 'react-dom/server';
 import Navigation from '../../components/navigation/Navigation';
 import useLocalStorage from '../../scripts/localStorageData';
 import "./Education.scss";
@@ -86,10 +87,13 @@ function Education() //Defining the function Education in which all the constant
          </svg>
     );
 
+    const svgImageEducationString = renderToString(svgImageEducation);
+    localStorage.setItem('svgImageEducationStored', svgImageEducationString);
+
     const [form, changeForm] = useState(false);
     const toggleForm = () => changeForm(!form);
 
-    const educationForm1 = (//Set the values of respective field of education in html Form
+    const educationForm1 = ( //Set the values of respective field of education in html Form
         <form>
             <p className="currentform-text">current form: 1</p>
             <div>

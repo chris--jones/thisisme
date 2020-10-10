@@ -44,7 +44,6 @@ function Personal() { //Defining the function Personal in which all the constant
     const svgImagePersonalString = renderToString(svgImagePersonal);
     localStorage.setItem('svgImagePersonalStored', svgImagePersonalString);
 
-
     return (
         <>
             <Navigation />

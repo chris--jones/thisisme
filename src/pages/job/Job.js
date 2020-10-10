@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { renderToString } from 'react-dom/server';
 import Navigation from '../../components/navigation/Navigation';
 import useLocalStorage from '../../scripts/localStorageData';
 import "./Job.scss";
@@ -84,6 +85,9 @@ function Job() { //Defining the function Job in which all the constant defined w
             </g>
          </svg>
     );
+
+    const svgImageJobString = renderToString(svgImageJob);
+    localStorage.setItem('svgImageJobStored', svgImageJobString);
 
     const [form, changeForm] = useState(false);
     const toggleForm = () => changeForm(!form);
