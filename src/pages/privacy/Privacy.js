@@ -14,8 +14,8 @@ function Privacy() { //Funtion stated the Privacy Policy for the App
             <p>This website takes the text inputs from <code>input</code> fields, all of them inside a <code>form</code> tag. The button below that is used in some sections to change between forms is not inside the <code>form</code> tag; it's in the container that wraps the form and the extra information. The button interacts only with React hooks to change the state. There's no interaction with the button of the form so it doesn't storage any data in any database, nor sends the data to a service or database.</p>
             <h2>Manage your data</h2>
             <p>As written before, the website stores locally in the browser the data you've written in every input of every form. This data will keep even if you change the page or if you close the website tab or browser, unless you manually delete it. To see this data, open the <strong>Developer tools</strong>, then click on the <strong>Application</strong> tab and click on <strong>Local Storage</strong>. If you want to delete this data, click on the <strong>Clear All</strong> icon/button.</p>
-		<Footer/>        
-	</div>
+		    <Footer/>        
+	    </div>
 	
     );
 }
