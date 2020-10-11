@@ -88,14 +88,14 @@ function Certificates() { //Creating the funtion which generate the Certificates
 
     const headerTextCertificates = (certificatesInnerCard1 === null && certificatesInnerCard2 === null && certificatesInnerCard3 === null) ? null : <text x="25" y="36" fill="#2F80ED" fontFamily="Segoe UI" fontWeight="600" fontSize="18px">My certificates</text>
 
-    const imgHeight = (certificatesInnerCard1 === null && certificatesInnerCard2 === null && certificatesInnerCard3 === null) ? 26 : 194;
+    const imgHeight = (certificatesInnerCard1 === null && certificatesInnerCard2 === null && certificatesInnerCard3 === null) ? 0 : 194;
 
     const [checked, setChecked] = useState(false);
     const certificatesTextMore = (checked === true) ? <text x="420" y="44" fill="#2F80ED" fontFamily="Segoe UI" fontWeight="700" fontSize="12px">+ more</text> : null;
 
     const svgImageCertificates = ( //Set the positions of the Certificates
         <svg width="495" height={imgHeight} viewBox={`0 0 495 ${imgHeight}`} fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.5" y="0.5" width="99%" height="99%" rx="4.5" fill="#FFFEFE" stroke="#E4E2E2"/>
+            <rect x="0.5" y="0.5" width="494" height={imgHeight - 1} rx="4.5" fill="#FFFEFE" stroke="#E4E2E2"/>
             {headerTextCertificates}
             {certificatesTextMore}
             <g>

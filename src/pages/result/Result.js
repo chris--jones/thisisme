@@ -10,27 +10,31 @@ function Result() {
     const width = 1000;
     const height = 470;
 
+    // The order of the strings determine the order of how the image will be placed
+
     const svgImageProgrammingPassed = localStorage.getItem('svgImageProgrammingStored')
     const svgImageTechnologiesPassed = localStorage.getItem('svgImageTechnologiesStored')
-    const svgImagePersonalPassed = localStorage.getItem('svgImagePersonalStored')
     const svgImageEducationPassed = localStorage.getItem('svgImageEducationStored')
     const svgImageJobPassed = localStorage.getItem('svgImageJobStored')
+    const svgImagePersonalPassed = localStorage.getItem('svgImagePersonalStored')
     const svgImageCertificatesPassed = localStorage.getItem('svgImageCertificatesStored')
 
     const svgImageProgrammingPassedClean = DOMPurify.sanitize(svgImageProgrammingPassed);
     const svgImageTechnologiesPassedClean = DOMPurify.sanitize(svgImageTechnologiesPassed);
-    const svgImagePersonalPassedClean = DOMPurify.sanitize(svgImagePersonalPassed);
     const svgImageEducationPassedClean = DOMPurify.sanitize(svgImageEducationPassed);
     const svgImageJobPassedClean = DOMPurify.sanitize(svgImageJobPassed);
+    const svgImagePersonalPassedClean = DOMPurify.sanitize(svgImagePersonalPassed);
     const svgImageCertificatesPassedClean = DOMPurify.sanitize(svgImageCertificatesPassed);
 
     svgImages.push(parse(svgImageProgrammingPassedClean));
     svgImages.push(parse(svgImageTechnologiesPassedClean));
-    svgImages.push(parse(svgImagePersonalPassedClean));
     svgImages.push(parse(svgImageEducationPassedClean));
     svgImages.push(parse(svgImageJobPassedClean));
+    svgImages.push(parse(svgImagePersonalPassedClean));
     svgImages.push(parse(svgImageCertificatesPassedClean));
     console.log(svgImages);
+
+    // Detect positioning
 
     let curHeight = 0;
 
@@ -45,6 +49,8 @@ function Result() {
             curHeight += Math.max(parseInt(svgImages[i].props.height), parseInt(svgImages[i - 1].props.height));
         }
     }
+
+    // Download image
 
     const svgToPngUrl = (svgBlob) => new Promise((resolve) => {
         const image = new Image();

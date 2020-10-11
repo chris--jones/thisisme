@@ -11,7 +11,7 @@ function Technologies() { //This function defined the constants, used to store t
     );
     const valueChangeTechnologies = event => setValueTechnologies(event.target.value);
 
-    const imgHeight = (valueTechnologies === '') ? 26 : 82;
+    const imgHeight = (valueTechnologies === '') ? 0 : 82;
 
     /*const location = useLocation();
     const currentPath = location.pathname;

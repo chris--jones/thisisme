@@ -30,11 +30,11 @@ function Personal() { //Defining the function Personal in which all the constant
     const personalLanguagesText = (valuePersonalLanguages === '') ? null : <text x="25" y="36"><tspan x="25" y={personalLanguagesPositionTitle} fill="#2F80ED" fontFamily="Segoe UI" fontWeight="600" fontSize="18px">Languages I speak</tspan><tspan x="25" y={personalLanguagesPositionText} fill="#333" fontFamily="Segoe UI" fontWeight="400" fontSize="14px">{valuePersonalLanguages}</tspan></text>;
     const personalHobbiesText = (valuePersonalHobbies === '') ? null : <text x="25" y="36"><tspan x="25" y={personalHobbiesPositionTitle} fill="#2F80ED" fontFamily="Segoe UI" fontWeight="600" fontSize="18px">My hobbies</tspan><tspan x="25" y={personalHobbiesPositionText} fill="#333" fontFamily="Segoe UI" fontWeight="400" fontSize="14px">{valuePersonalHobbies}</tspan></text>;
 
-    const imgHeight = (valuePersonalFullname === '' && valuePersonalLanguages === '' && valuePersonalHobbies === '') ? 26 : (valuePersonalFullname === '' && valuePersonalLanguages === '') || (valuePersonalFullname === '' && valuePersonalHobbies === '') || (valuePersonalLanguages === '' && valuePersonalHobbies === '') ? 82 : (valuePersonalFullname === '' || valuePersonalLanguages === '' || valuePersonalHobbies === '') ? 138 : 194;
+    const imgHeight = (valuePersonalFullname === '' && valuePersonalLanguages === '' && valuePersonalHobbies === '') ? 0 : (valuePersonalFullname === '' && valuePersonalLanguages === '') || (valuePersonalFullname === '' && valuePersonalHobbies === '') || (valuePersonalLanguages === '' && valuePersonalHobbies === '') ? 82 : (valuePersonalFullname === '' || valuePersonalLanguages === '' || valuePersonalHobbies === '') ? 138 : 194;
 
     const svgImagePersonal = ( //Positon of header and text fields
         <svg width="495" height={imgHeight} viewBox={`0 0 495 ${imgHeight}`} fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.5" y="0.5" width="99%" height="99%" rx="4.5" fill="#FFFEFE" stroke="#E4E2E2" />
+            <rect x="0.5" y="0.5" width="494" height={imgHeight - 1} rx="4.5" fill="#FFFEFE" stroke="#E4E2E2" />
             {personalFullnameText}
             {personalLanguagesText}
             {personalHobbiesText}

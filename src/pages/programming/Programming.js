@@ -13,7 +13,7 @@ function Programming() { //Defining the function Programming in which all the co
 
     const programmingText = (valueProgramming === '') ? null : <text x="25" y="36"><tspan x="25" y="36" fill="#2F80ED" fontFamily="Segoe UI" fontWeight="600" fontSize="18px">Programming languages I code in</tspan><tspan x="25" y="60" fill="#333" fontFamily="Segoe UI" fontWeight="400" fontSize="14px">{valueProgramming}</tspan></text>;
 
-    const imgHeight = (valueProgramming === '') ? 26 : 82;
+    const imgHeight = (valueProgramming === '') ? 0 : 82;
 
     const svgImageProgramming = (
         <svg width="495" height={imgHeight} viewBox={`0 0 495 ${imgHeight}`} fill="none" xmlns="http://www.w3.org/2000/svg">
