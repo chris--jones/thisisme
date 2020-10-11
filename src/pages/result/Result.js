@@ -8,28 +8,28 @@ function Result() {
     let svgImages = [];
     let svgCards = [];
     const width = 1000;
-    const height = 390;
+    const height = 470;
 
     const svgImageProgrammingPassed = localStorage.getItem('svgImageProgrammingStored')
     const svgImageTechnologiesPassed = localStorage.getItem('svgImageTechnologiesStored')
     const svgImagePersonalPassed = localStorage.getItem('svgImagePersonalStored')
-    /*const svgImageEducationPassed = localStorage.getItem('svgImageEducationStored')
+    const svgImageEducationPassed = localStorage.getItem('svgImageEducationStored')
     const svgImageJobPassed = localStorage.getItem('svgImageJobStored')
-    const svgImageCertificatesPassed = localStorage.getItem('svgImageCertificatesStored')*/
+    const svgImageCertificatesPassed = localStorage.getItem('svgImageCertificatesStored')
 
     const svgImageProgrammingPassedClean = DOMPurify.sanitize(svgImageProgrammingPassed);
     const svgImageTechnologiesPassedClean = DOMPurify.sanitize(svgImageTechnologiesPassed);
     const svgImagePersonalPassedClean = DOMPurify.sanitize(svgImagePersonalPassed);
-    /*const svgImageEducationPassedClean = DOMPurify.sanitize(svgImageEducationPassed);
+    const svgImageEducationPassedClean = DOMPurify.sanitize(svgImageEducationPassed);
     const svgImageJobPassedClean = DOMPurify.sanitize(svgImageJobPassed);
-    const svgImageCertificatesPassedClean = DOMPurify.sanitize(svgImageCertificatesPassed);*/
+    const svgImageCertificatesPassedClean = DOMPurify.sanitize(svgImageCertificatesPassed);
 
     svgImages.push(parse(svgImageProgrammingPassedClean));
     svgImages.push(parse(svgImageTechnologiesPassedClean));
     svgImages.push(parse(svgImagePersonalPassedClean));
-    /*svgImages.push(parse(svgImageEducationPassedClean));
+    svgImages.push(parse(svgImageEducationPassedClean));
     svgImages.push(parse(svgImageJobPassedClean));
-    svgImages.push(parse(svgImageCertificatesPassedClean));*/
+    svgImages.push(parse(svgImageCertificatesPassedClean));
     console.log(svgImages);
 
     let curHeight = 0;
