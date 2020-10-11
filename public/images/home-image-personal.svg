@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="result-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="497.5px" height="195.5px" viewBox="0 0 497.5 195.5" enable-background="new 0 0 497.5 195.5" xml:space="preserve">
+<g>
+	<defs>
+		<polygon id="SVGID_1_" points="2,1 3,1 2,2 		"/>
+	</defs>
+	<defs>
+		<polygon id="SVGID_2_" points="0,-1 -1,-1 0,-2 		"/>
+	</defs>
+	<clipPath id="SVGID_3_">
+		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+	</clipPath>
+	<clipPath id="SVGID_4_" clip-path="url(#SVGID_3_)">
+		<use xlink:href="#SVGID_2_"  overflow="visible"/>
+	</clipPath>
+	<path clip-path="url(#SVGID_4_)" fill="#FFFEFE" stroke="#E4E2E2" d="M6,0.5h485c2.485,0,4.5,0,4.5,0l0,0c0,0-2.015,0-4.5,0H6
+		c-2.485,0-4.5,0-4.5,0l0,0C1.5,0.5,3.515,0.5,6,0.5z"/>
+</g>
+<g>
+	<defs>
+		<polygon id="SVGID_5_" points="2,1 3,1 2,2 		"/>
+	</defs>
+	<defs>
+		<polygon id="SVGID_6_" points="0,-1 -1,-1 0,-2 		"/>
+	</defs>
+	<clipPath id="SVGID_7_">
+		<use xlink:href="#SVGID_5_"  overflow="visible"/>
+	</clipPath>
+	<clipPath id="SVGID_8_" clip-path="url(#SVGID_7_)">
+		<use xlink:href="#SVGID_6_"  overflow="visible"/>
+	</clipPath>
+	<path clip-path="url(#SVGID_8_)" fill="#FFFEFE" stroke="#E4E2E2" d="M506,0.5h485c2.485,0,4.5,0,4.5,0l0,0c0,0-2.015,0-4.5,0H506
+		c-2.485,0-4.5,0-4.5,0l0,0C501.5,0.5,503.515,0.5,506,0.5z"/>
+</g>
+<g>
+	<defs>
+		<polygon id="SVGID_9_" points="2,1 3,1 2,2 		"/>
+	</defs>
+	<defs>
+		<polygon id="SVGID_10_" points="0,-1 -1,-1 0,-2 		"/>
+	</defs>
+	<clipPath id="SVGID_11_">
+		<use xlink:href="#SVGID_9_"  overflow="visible"/>
+	</clipPath>
+	<clipPath id="SVGID_12_" clip-path="url(#SVGID_11_)">
+		<use xlink:href="#SVGID_10_"  overflow="visible"/>
+	</clipPath>
+	<path clip-path="url(#SVGID_12_)" fill="#FFFEFE" stroke="#E4E2E2" d="M6,0.5h485c2.485,0,4.5,0,4.5,0l0,0c0,0-2.015,0-4.5,0H6
+		c-2.485,0-4.5,0-4.5,0l0,0C1.5,0.5,3.515,0.5,6,0.5z"/>
+</g>
+<g>
+	<defs>
+		<polygon id="SVGID_13_" points="2,1 3,1 2,2 		"/>
+	</defs>
+	<defs>
+		<polygon id="SVGID_14_" points="0,-1 -1,-1 0,-2 		"/>
+	</defs>
+	<clipPath id="SVGID_15_">
+		<use xlink:href="#SVGID_13_"  overflow="visible"/>
+	</clipPath>
+	<clipPath id="SVGID_16_" clip-path="url(#SVGID_15_)">
+		<use xlink:href="#SVGID_14_"  overflow="visible"/>
+	</clipPath>
+	<path clip-path="url(#SVGID_16_)" fill="#FFFEFE" stroke="#E4E2E2" d="M506,0.5h485c2.485,0,4.5,0,4.5,0l0,0c0,0-2.015,0-4.5,0H506
+		c-2.485,0-4.5,0-4.5,0l0,0C501.5,0.5,503.515,0.5,506,0.5z"/>
+</g>
+<path fill="#FFFEFE" stroke="#E4E2E2" d="M6,1.5h485c2.485,0,4.5,2.015,4.5,4.5v184c0,2.485-2.015,4.5-4.5,4.5H6
+	c-2.485,0-4.5-2.015-4.5-4.5V6C1.5,3.515,3.515,1.5,6,1.5z"/>
+<text transform="matrix(1 0 0 1 26 37)" fill="#2F80ED" font-family="'SegoeUI-Semibold'" font-size="18">My full name</text>
+<text transform="matrix(1 0 0 1 26 61)" fill="#333333" font-family="'SegoeUI'" font-size="14">Jim Ignacius</text>
+<text transform="matrix(1 0 0 1 26 91)" fill="#2F80ED" font-family="'SegoeUI-Semibold'" font-size="18">Languages I speak</text>
+<text transform="matrix(1 0 0 1 26 115)" fill="#333333" font-family="'SegoeUI'" font-size="14">Japanese, Chinese, English</text>
+<text transform="matrix(1 0 0 1 26 145)" fill="#2F80ED" font-family="'SegoeUI-Semibold'" font-size="18">My hobbies</text>
+<text transform="matrix(1 0 0 1 26 169)" fill="#333333" font-family="'SegoeUI'" font-size="14">Play basketball, Cook</text>
+<g>
+	<defs>
+		<polygon id="SVGID_17_" points="-245,-261 -244,-261 -245,-260 		"/>
+	</defs>
+	<defs>
+		<polygon id="SVGID_18_" points="-247,-263 -248,-263 -247,-264 		"/>
+	</defs>
+	<clipPath id="SVGID_19_">
+		<use xlink:href="#SVGID_17_"  overflow="visible"/>
+	</clipPath>
+	<clipPath id="SVGID_20_" clip-path="url(#SVGID_19_)">
+		<use xlink:href="#SVGID_18_"  overflow="visible"/>
+	</clipPath>
+	<path clip-path="url(#SVGID_20_)" fill="#FFFEFE" stroke="#E4E2E2" d="M259-261.5h485c2.485,0,4.5,0,4.5,0l0,0c0,0-2.015,0-4.5,0
+		H259c-2.485,0-4.5,0-4.5,0l0,0C254.5-261.5,256.515-261.5,259-261.5z"/>
+</g>
+</svg>
