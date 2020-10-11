@@ -16,7 +16,6 @@ function Home() {
                     <FontAwesomeIcon icon={["fab", "github"]}/>
                 </a>
             </div>
-            <p id="hacktoberfest-p">See the <a href="https://github.com/JoseDeFreitas/thisisme/issues">Issues section</a> to know where to contribute for the Hacktoberfest 2020! Thank you 😊</p>
             <Footer/>
         </div>
     );

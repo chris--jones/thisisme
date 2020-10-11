@@ -83,13 +83,15 @@ function Result() {
     return (
         <>
             <Navigation />
-            <div id="result">
-                <svg id="result-svg" width={width} height={height} viewBox={`0 0 ${width} ${height}`} fill="none" xmlns="http://www.w3.org/2000/svg">
-                    {svgCards}
-                </svg>
-                <div className="button-group">
-                <button className="download-button" data-type="svg" onClick={download}>Download SVG</button>
-                <button className="download-button" data-type="png" onClick={download}>Download PNG</button>
+            <div className="section-wrapper">
+                <div id="result">
+                    <svg id="result-svg" width={width} height={height} viewBox={`0 0 ${width} ${height}`} fill="none" xmlns="http://www.w3.org/2000/svg">
+                        {svgCards}
+                    </svg>
+                    <div className="button-group">
+                        <button className="download-button" data-type="svg" onClick={download}>Download SVG</button>
+                        <button className="download-button" data-type="png" onClick={download}>Download PNG</button>
+                    </div>
                 </div>
             </div>
         </>
