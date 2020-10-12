@@ -5,6 +5,35 @@
 	justify-content: center;
 	flex-direction: column;
 	margin-bottom: 4rem;
+	#home-images {
+		.home-image {
+			position: absolute;
+		}
+		.home-image:nth-child(1) {
+			left: 7rem;
+			top: 23rem;
+		}
+		.home-image:nth-child(2) {
+			bottom: 26rem;
+			right: 7rem;
+		}
+		.home-image:nth-child(3) {
+			bottom: 8rem;
+			left: 14rem;
+		}
+		.home-image:nth-child(4) {
+			top: 3rem;
+			right: 22rem;
+		}
+		.home-image:nth-child(5) {
+			top: 4rem;
+			left: 17rem;
+		}
+		.home-image:nth-child(6) {
+			bottom: 6rem;
+			right: 19rem;
+		}
+	}
 	#version-text {
 		color: hsl(0, 0%, 45%);
 		font-size: .7rem;
