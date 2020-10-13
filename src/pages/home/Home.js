@@ -15,12 +15,12 @@ function Home() {
     return (
         <div id="home">
             <div id="home-images">
-                <img className="home-image" src={ImageProgramming} alt="Image Programming section preview"/>
-                <img className="home-image" src={ImageTechnologies} alt="Image Technologies section preview"/>
-                <img className="home-image" src={ImageEducation} alt="Image Education section preview"/>
-                <img className="home-image" src={ImageJob} alt="Image Job section preview"/>
-                <img className="home-image" src={ImagePersonal} alt="Image Personal section preview"/>
-                <img className="home-image" src={ImageCertificates} alt="Image Certificates section preview"/>
+                <img className="home-image" src={ImageProgramming} alt="Programming section preview"/>
+                <img className="home-image" src={ImageTechnologies} alt="Technologies section preview"/>
+                <img className="home-image" src={ImageEducation} alt="Education section preview"/>
+                <img className="home-image" src={ImageJob} alt="Job section preview"/>
+                <img className="home-image" src={ImagePersonal} alt="Personal section preview"/>
+                <img className="home-image" src={ImageCertificates} alt="Certificates section preview"/>
             </div>
             <a id="version-text" href="https://github.com/JoseDeFreitas/thisisme/releases" target="_blank" rel="noopener noreferrer">v1.0.0</a>
             <h1>thisisme</h1>
