@@ -7,8 +7,6 @@ import "./Result.scss";
 function Result() {
     let svgImages = [];
     let svgCards = [];
-    const width = 1000;
-    const height = 470;
 
     // The order of the strings determine the order of how the image will be placed
 
@@ -33,6 +31,9 @@ function Result() {
     svgImages.push(parse(svgImagePersonalPassedClean));
     svgImages.push(parse(svgImageCertificatesPassedClean));
     console.log(svgImages);
+
+    const width = 1000;
+    const height = 470;
 
     // Detect positioning
 
