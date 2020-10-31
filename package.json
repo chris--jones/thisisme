@@ -1,31 +1,14 @@
 {
   "name": "thisisme",
   "version": "0.1.0",
-  "private": true,
+  "author": "JoseDeFreitas",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-brands-svg-icons": "^5.15.1",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "^0.1.11",
-    "@primer/components": "^20.0.0",
-    "@svgdotjs/svg.js": "^3.0.16",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "dompurify": "^2.0.17",
-    "html-react-parser": "^0.14.0",
-    "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.3",
-    "styled-components": "^5.2.0"
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "npx parcel start src/index.html",
+    "build": "npx parcel build src/index.html"
   },
   "eslintConfig": {
     "extends": "react-app"

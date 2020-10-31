@@ -1,0 +1,131 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Inter, 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+button {
+	cursor: pointer;
+	background-color: #3375f0;
+	color: #fff;
+	font-weight: bold;
+	border: 0;
+	border-radius: 4px;
+	padding: 0.5rem 1rem;
+}
+
+button:hover {
+	background-color: #5088f2;
+}
+
+a, button.link {
+	color: #3375f0;
+	cursor: pointer;
+	text-decoration: underline;
+	font-weight: normal;
+	font-size: inherit;
+	display: inline;
+	background: none;
+	border: 0;
+	padding: 0;
+}
+
+p {
+	color: #707070;
+	font-size: 0.75rem;
+}
+
+#root {
+	height: 100vh;
+	display: flex;
+}
+
+main {
+	flex: 1;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+}
+
+#sidebar {
+	color: #fff;
+	background: #404040;
+}
+
+#sidebar h2 {
+	cursor: pointer;
+	background: #000;
+	padding: 1rem;
+}
+
+#sidebar button {
+	text-align: left;
+	color: #fff;
+	border: 0;
+	font-weight: normal;
+	font-size: 18px;
+	cursor: pointer;
+	background: none;
+	min-width: 100%;
+	padding: 1rem 2rem;
+}
+
+#sidebar button:hover {
+	background: #000;
+}
+
+#sidebar button.active::before {
+	content:'>';
+	display: block;
+	position: absolute;
+	margin-left: -1.25rem;
+}
+
+.section:nth-child(n+2) {
+	margin-top: 1rem;
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	padding: .8rem;
+	border-radius: .5rem;
+	border: 1px solid #c7c7c7;
+}
+.section input+label {
+	margin-top: 1rem;
+}
+.section label, .section .label {
+	color: #3375f0;
+}
+.section label span {
+	color: #5a5858;
+	font-size: .8rem;
+}
+.section input {
+	padding: 0.8rem;
+	margin-top: .4rem;
+	border: 1px solid #dbdbdb;
+	outline: none;
+}
+.section p:last-child {
+	margin-bottom: 0;
+}
+
+.section input:focus {
+	border: 1px solid #858585;
+}
+
+.notes li::before {
+	content: '*';
+	color: red;
+	display: inline-block;
+	width: 1rem;
+}
