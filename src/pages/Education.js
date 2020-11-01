@@ -27,11 +27,11 @@ export default () => {
   return (
     <>
       <div className="section">
-        <label htmlFor="education">College name</label>
+        <label htmlFor="education-college">College name</label>
         <br />
         <input
           type="text"
-          id="education"
+          id="education-college"
           data-field="collegeName"
           autoFocus={true}
           minLength={0}
@@ -39,24 +39,24 @@ export default () => {
           value={education.collegeName || ''}
           onChange={onEducationChange}
         />
-        <label htmlFor="education">Career title</label>
+        <label htmlFor="education-career">Career title</label>
         <br />
         <input
           type="text"
-          id="education"
+          id="education-career"
           data-field="careerTitle"
           minLength={0}
           maxLength={50}
           value={education.careerTitle || ''}
           onChange={onEducationChange}
         />
-        <label htmlFor="education">
+        <label htmlFor="education-years">
           Career years <span>(MM/YYYY-MM/YYYY) or (YYYY/YYYY)</span>
         </label>
         <br />
         <input
           type="text"
-          id="education"
+          id="education-years"
           data-field="careerYears"
           minLength={0}
           maxLength={50}

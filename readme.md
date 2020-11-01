@@ -13,10 +13,6 @@
 ### TLDR;
 > Create cool images containing useful information about you and your work for your GitHub readme.
 
-## 🎃 Hacktoberfest
-
-This Repo is open for contribution. We welcome contribution from anyone participating in Hacktoberfest 2020. 
-
 ## 🕹 How to use?
 To use this app, first install the app locally. 
 1. Click the Start button on the homepage.
@@ -50,43 +46,6 @@ Start the project locally to see it in action.
 ```sh
 npm run start
 ```
-## 🧪 Run tests
-
-```sh
-npm run test
-```
-
-## 🐳 Run through Docker
-
-First clone this repository:
-```sh
-git clone https://github.com/JoseDeFreitas/thisisme.git
-cd thisisme
-```
-
-### Execute the command:
-```sh
-docker-compose up
-```
-
-### Start the project locally to see it in action.
-
-```sh
-- localhost 
-OR 
-- 0.0.0.0
-```
-
-### Access the container to see the logs:
-```sh
-- localhost:9000
-OR 
-- 0.0.0.0:9000
-```
-Do the follow steps to use the Portainer:
-1. You'll need to create a password for local admin account.
-2. Choose the option: "**Docker** *manage the local Docker environment*".
-3. Done, you're now able to manage the containers.
 
 ## 👤 Author
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './index.css';
 import NavigationMenu from './components/NavigationMenu';
 import Navigation from './components/Navigation';
@@ -42,7 +42,18 @@ export const Switch = ({ page }) => {
 };
 
 export default () => {
-  const [page, setPage] = useState('home');
+  const currentPage = location.hash ? location.hash.substr(1) : 'home';
+  const [page, setPage] = useState(currentPage);
+  const setPageFromHash = () => {
+    if (location.hash) {
+      setPage(location.hash.substr(1));
+    } else {
+      setPage('home');
+    }
+  };
+  useEffect(() => {
+    window.addEventListener('hashchange', setPageFromHash, false);
+  }, []);
   return (
     <GlobalState>
       <Navigation page={page} setPage={setPage}>

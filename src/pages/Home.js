@@ -3,7 +3,7 @@ import { NavigationContext } from '../components/Navigation';
 
 export default () => {
   const { setPage } = useContext(NavigationContext);
-  const goProgramming = () => setPage('programming');
+  const goPersonal = () => setPage('personal');
   return (
     <div id="home">
       <a
@@ -22,7 +22,7 @@ export default () => {
         <br />
         for your GitHub readme
       </p>
-      <button onClick={goProgramming}>Start</button>
+      <button onClick={goPersonal}>Start</button>
       <br />
       <a
         id="gh-button"

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { GlobalStateContext } from '../components/GlobalState';
+import { NavigationItems } from './Navigation';
 
 const chunk = (array, size) =>
   array.reduce((a, c, i) => {
@@ -7,6 +8,9 @@ const chunk = (array, size) =>
     else a[Math.floor(i / size)].push(c);
     return a;
   }, []);
+
+const sectionOrder = (section) =>
+  NavigationItems.findIndex((item) => item.toLocaleLowerCase() === section);
 
 const Rows = ({ x, y, values }) => {
   if (typeof values === 'object') {
@@ -39,12 +43,13 @@ export default () => {
       section: key,
       value,
     }));
+  stateArray.sort((a, b) => sectionOrder(a) > sectionOrder(b) ? -1 : 1);
   const sections = chunk(stateArray, 2);
   const totalHeight = (sectionHeight + margin) * sections.length + margin;
   const totalWidth = sectionWidth * 2 + margin * 3;
   const fullWidth = sectionWidth * 2 + margin;
   const scaleRatio =
-    (document.querySelector('main').offsetWidth - buffer) / totalWidth;
+    ((document.querySelector('main')||{}).offsetWidth - buffer) / totalWidth;
   return (
     <svg
       width={totalWidth * scaleRatio}
@@ -58,7 +63,7 @@ export default () => {
           transform={`translate(${margin}, ${i * (sectionHeight + margin)})`}
         >
           {group.map((row, j) => (
-            <g>
+            <g key={j}>
               <rect
                 key={row.section}
                 x={j * (sectionWidth + margin)}
