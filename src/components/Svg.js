@@ -9,27 +9,36 @@ const chunk = (array, size) =>
     return a;
   }, []);
 
-const sectionOrder = (section) => NavigationItems.findIndex((item) => item.toLocaleLowerCase() === section);
+const sectionOrder = (section) =>
+  NavigationItems.findIndex((item) => item.toLocaleLowerCase() === section);
 
 const titleFormat = (title) =>
   title[0].toLocaleUpperCase() +
   title.substr(1).replace(/([a-z]+)([A-Z])/g, (_, a, b) => `${a} ${b}`);
 
+const fontFamily = "Inter, 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif";
 const Rows = ({ title, x, y, entries }) => {
   return (
     <>
-      <text x={x} y={y} fontSize={20} fontWeight={600} fill="#2f80ed">
+      <text
+        x={x}
+        y={y}
+        fontFamily={fontFamily}
+        fontSize={20}
+        fontWeight={600}
+        fill="#2f80ed"
+      >
         {titleFormat(title)}
       </text>
       {typeof entries === 'object' ? (
         Object.entries(entries).map(([key, value], i) => (
-          <text x={x} y={y + i * 30 + 40} key={key}>
+          <text fontFamily={fontFamily} x={x} y={y + i * 30 + 40} key={key}>
             <tspan fontWeight={600}>{titleFormat(key)}</tspan>{' '}
             <tspan dx={10}>{value}</tspan>
           </text>
         ))
       ) : (
-        <text x={x} y={y + 40}>
+        <text fontFamily={fontFamily} x={x} y={y + 40}>
           {entries}
         </text>
       )}
@@ -38,8 +47,8 @@ const Rows = ({ title, x, y, entries }) => {
 };
 
 export default () => {
-  const buffer = 70;
-  const margin = 30;
+  const buffer = 150;
+  const margin = 15;
   const paddingX = 30;
   const paddingY = 50;
   const sectionHeight = 200;
@@ -55,15 +64,17 @@ export default () => {
       section: key,
       value,
     }));
-  stateArray.sort((a, b) => (sectionOrder(a.section) < sectionOrder(b.section) ? -1 : 1));
+  stateArray.sort((a, b) =>
+    sectionOrder(a.section) < sectionOrder(b.section) ? -1 : 1,
+  );
   const sections = chunk(stateArray, 2);
   const totalHeight = (sectionHeight + margin) * sections.length + margin;
   const totalWidth = sectionWidth * 2 + margin * 3;
   const fullWidth = sectionWidth * 2 + margin;
   useEffect(() => {
     setScaleRatio(
-      ((document.querySelector('main') || {}).offsetWidth - buffer) /
-        totalWidth,
+      ((document.querySelector('main') || {}).offsetHeight - buffer) /
+        totalHeight,
     );
   }, []);
   return (
@@ -72,6 +83,7 @@ export default () => {
       height={totalHeight * scaleRatio || 0}
       viewBox={`0 0 ${totalWidth} ${totalHeight}`}
       preserveAspectRatio="xMidYMid meet"
+      xmlns="http://www.w3.org/2000/svg"
     >
       {sections.map((group, i) => (
         <g

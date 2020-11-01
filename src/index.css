@@ -85,15 +85,26 @@ main {
 	padding: 1rem 2rem;
 }
 
+#sidebar li {
+	position: relative;
+}
+
 #sidebar a:hover {
 	background: #000;
 }
 
 #sidebar a.active::before {
-	content:'>';
+	content:'';
+	width: 0; 
+	height: 0; 
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-left: 8px solid #fff;
 	display: block;
 	position: absolute;
-	margin-left: -1.25rem;
+	margin-left: -1rem;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .section:nth-child(n+2) {
