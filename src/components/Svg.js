@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { GlobalStateContext } from '../components/GlobalState';
 import { NavigationItems } from './Navigation';
 
@@ -12,27 +12,40 @@ const chunk = (array, size) =>
 const sectionOrder = (section) =>
   NavigationItems.findIndex((item) => item.toLocaleLowerCase() === section);
 
-const Rows = ({ x, y, values }) => {
-  if (typeof values === 'object') {
-    return Object.entries(values).map(([key, value], i) => (
-      <text x={x} y={y + i * 30} key={key}>
-        {key} {value}
+const titleFormat = (title) =>
+  title[0].toLocaleUpperCase() +
+  title.substr(1).replace(/([a-z]+)([A-Z])/g, (_, a, b) => `${a} ${b}`);
+
+const Rows = ({ title, x, y, entries }) => {
+  return (
+    <>
+      <text x={x} y={y} fontSize={20} fontWeight={600} fill="#2f80ed">
+        {titleFormat(title)}
       </text>
-    ));
-  } else {
-    return (
-      <text x={x} y={y}>
-        {values}
-      </text>
-    );
-  }
+      {typeof entries === 'object' ? (
+        Object.entries(entries).map(([key, value], i) => (
+          <text x={x} y={y + i * 30 + 40} key={key}>
+            <tspan fontWeight={600}>{titleFormat(key)}</tspan>{' '}
+            <tspan dx={10}>{value}</tspan>
+          </text>
+        ))
+      ) : (
+        <text x={x} y={y + 40}>
+          {entries}
+        </text>
+      )}
+    </>
+  );
 };
+
 export default () => {
   const buffer = 70;
   const margin = 30;
-  const padding = 50;
+  const paddingX = 30;
+  const paddingY = 50;
   const sectionHeight = 200;
   const sectionWidth = 450;
+  const [scaleRatio, setScaleRatio] = useState(1);
   const [globalState] = useContext(GlobalStateContext);
   const stateArray = Object.entries(globalState)
     .filter(
@@ -43,17 +56,21 @@ export default () => {
       section: key,
       value,
     }));
-  stateArray.sort((a, b) => sectionOrder(a) > sectionOrder(b) ? -1 : 1);
+  stateArray.sort((a, b) => (sectionOrder(a) > sectionOrder(b) ? -1 : 1));
   const sections = chunk(stateArray, 2);
   const totalHeight = (sectionHeight + margin) * sections.length + margin;
   const totalWidth = sectionWidth * 2 + margin * 3;
   const fullWidth = sectionWidth * 2 + margin;
-  const scaleRatio =
-    ((document.querySelector('main')||{}).offsetWidth - buffer) / totalWidth;
+  useEffect(() => {
+    setScaleRatio(
+      ((document.querySelector('main') || {}).offsetWidth - buffer) /
+        totalWidth,
+    );
+  }, []);
   return (
     <svg
-      width={totalWidth * scaleRatio}
-      height={totalHeight * scaleRatio}
+      width={totalWidth * scaleRatio || 0}
+      height={totalHeight * scaleRatio || 0}
       viewBox={`0 0 ${totalWidth} ${totalHeight}`}
       preserveAspectRatio="xMidYMid meet"
     >
@@ -79,9 +96,10 @@ export default () => {
                 }}
               />
               <Rows
-                x={j * (sectionWidth + margin) + padding}
-                y={margin + padding}
-                values={row.value}
+                x={j * (sectionWidth + margin) + paddingX}
+                y={margin + paddingY}
+                title={row.section}
+                entries={row.value}
               />
             </g>
           ))}

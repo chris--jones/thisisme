@@ -12,11 +12,11 @@ const setToStorage = (value) => {
 };
 
 const DEFAULT_STATE = {
-  programming: {},
-  technologies: {},
+  personal: {},
+  programming: '',
+  technologies: '',
   education: {},
   job: {},
-  personal: {},
   certificates: {},
 };
 
