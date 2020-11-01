@@ -1,9 +1,7 @@
-import React, { useContext } from 'react';
-import { NavigationContext } from '../components/Navigation';
+import React from 'react';
+import { NavigationItems } from '../components/Navigation';
 
 export default () => {
-  const { setPage } = useContext(NavigationContext);
-  const goPersonal = () => setPage('personal');
   return (
     <div id="home">
       <a
@@ -22,10 +20,12 @@ export default () => {
         <br />
         for your GitHub readme
       </p>
-      <button onClick={goPersonal}>Start</button>
-      <br />
+      <a className="button" href={`#${NavigationItems[0].toLocaleLowerCase()}`}>
+        Start
+      </a>
+      &nbsp;
       <a
-        id="gh-button"
+        className="button"
         href="https://github.com/JoseDeFreitas/thisisme"
         target="_blank"
         rel="noopener noreferrer"

@@ -4,16 +4,10 @@ import { NavigationButton } from '../components/Navigation';
 import createNotes from '../components/Notes';
 
 const Notes = () =>
-  createNotes(
-    [
-      'only up to 2 inner cards.',
-      'add "Present" if necessary (eg. 04/2000-Present).',
-    ],
-    {
-      optional: true,
-      privacy: true,
-    },
-  );
+  createNotes([
+    'only up to 2 inner cards.',
+    'add "Present" if necessary (eg. 04/2000-Present).',
+  ]);
 
 export default () => {
   const [globalState, setGlobalState] = useContext(GlobalStateContext);
@@ -66,9 +60,7 @@ export default () => {
         <p>
           <NavigationButton to="job" content="Next" />
         </p>
-        <p>
-          each form corresponds to each inner card.
-        </p>
+        <p>each form corresponds to each inner card.</p>
       </div>
       <div className="section">
         <Notes />

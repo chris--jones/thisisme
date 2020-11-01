@@ -3,20 +3,11 @@ import { GlobalStateContext } from '../components/GlobalState';
 import { NavigationButton } from '../components/Navigation';
 import createNotes from '../components/Notes';
 
-const Notes = () =>
-  createNotes(
-    ['comma separated example: Docker, Git, ...'],
-    {
-      optional: true,
-      privacy: true,
-    },
-  );
+const Notes = () => createNotes(['comma separated example: Docker, Git, ...']);
 
 export default () => {
   const [globalState, setGlobalState] = useContext(GlobalStateContext);
-  const [technologies, setTechnologies] = useState(
-    globalState.technologies,
-  );
+  const [technologies, setTechnologies] = useState(globalState.technologies);
   const onTechnologyChange = (event) => {
     let newTechnologiesValue = event.target.value;
     setTechnologies(newTechnologiesValue);

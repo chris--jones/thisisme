@@ -4,10 +4,7 @@ import { NavigationButton } from '../components/Navigation';
 import createNotes from '../components/Notes';
 
 const Notes = () =>
-  createNotes(['comma separated example: English, French, ...'], {
-    optional: true,
-    privacy: true,
-  });
+  createNotes(['comma separated example: English, French, ...']);
 
 export default () => {
   const [globalState, setGlobalState] = useContext(GlobalStateContext);
@@ -33,7 +30,9 @@ export default () => {
           value={personal.fullName || ''}
           onChange={onPersonalChange}
         />
-        <label htmlFor="personal-languages">Languages I speak <span>(comma separated)</span></label>
+        <label htmlFor="personal-languages">
+          Languages I speak <span>(comma separated)</span>
+        </label>
         <br />
         <input
           type="text"
@@ -44,7 +43,9 @@ export default () => {
           value={personal.languagesSpoken || ''}
           onChange={onPersonalChange}
         />
-        <label htmlFor="personal-hobbies">My hobbies <span>(comma separated)</span></label>
+        <label htmlFor="personal-hobbies">
+          My hobbies <span>(comma separated)</span>
+        </label>
         <br />
         <input
           type="text"

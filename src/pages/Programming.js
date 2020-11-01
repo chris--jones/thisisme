@@ -4,16 +4,10 @@ import { NavigationButton } from '../components/Navigation';
 import createNotes from '../components/Notes';
 
 const Notes = () =>
-  createNotes(
-    [
-      'comma separated example: JavaScript, Ruby, ...',
-      'non-programming languages are also included (eg. HTML)',
-    ],
-    {
-      optional: true,
-      privacy: true,
-    },
-  );
+  createNotes([
+    'comma separated example: JavaScript, Ruby, ...',
+    'non-programming languages are also included (eg. HTML)',
+  ]);
 
 export default () => {
   const [globalState, setGlobalState] = useContext(GlobalStateContext);

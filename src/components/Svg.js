@@ -9,8 +9,7 @@ const chunk = (array, size) =>
     return a;
   }, []);
 
-const sectionOrder = (section) =>
-  NavigationItems.findIndex((item) => item.toLocaleLowerCase() === section);
+const sectionOrder = (section) => NavigationItems.findIndex((item) => item.toLocaleLowerCase() === section);
 
 const titleFormat = (title) =>
   title[0].toLocaleUpperCase() +
@@ -56,7 +55,7 @@ export default () => {
       section: key,
       value,
     }));
-  stateArray.sort((a, b) => (sectionOrder(a) > sectionOrder(b) ? -1 : 1));
+  stateArray.sort((a, b) => (sectionOrder(a.section) < sectionOrder(b.section) ? -1 : 1));
   const sections = chunk(stateArray, 2);
   const totalHeight = (sectionHeight + margin) * sections.length + margin;
   const totalWidth = sectionWidth * 2 + margin * 3;

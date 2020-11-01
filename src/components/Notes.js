@@ -1,7 +1,12 @@
 import React, { useContext } from 'react';
 import { NavigationContext } from './Navigation';
 
-export default (notes, options) => {
+const DEFAULT_OPTIONS = {
+  privacy: true,
+  optional: true,
+}
+
+export default (notes, options = DEFAULT_OPTIONS) => {
   const { setPage } = useContext(NavigationContext);
   const goPrivacy = () => setPage('privacy');
   return (
