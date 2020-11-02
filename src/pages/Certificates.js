@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { GlobalStateContext } from '../components/GlobalState';
-import { NavigationButton } from '../components/Navigation';
 import createNotes from '../components/Notes';
 
 const Notes = () =>
@@ -58,7 +57,7 @@ export default () => {
           onChange={onCertificatesChange}
         />
         <p>
-          <NavigationButton to="result" content="Result" />
+          <a href="#result">Result</a>
         </p>
         <p>each form corresponds to each inner card.</p>
       </div>

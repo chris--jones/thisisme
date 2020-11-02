@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { GlobalStateContext } from '../components/GlobalState';
-import { NavigationButton } from '../components/Navigation';
 import createNotes from '../components/Notes';
 
 const Notes = () =>
@@ -57,7 +56,7 @@ export default () => {
           onChange={onPersonalChange}
         />
         <p>
-          <NavigationButton to="programming" content="Next" />
+          <a href="#programming">Next</a>
         </p>
       </div>
       <div className="section">

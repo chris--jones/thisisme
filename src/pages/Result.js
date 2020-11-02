@@ -1,18 +1,18 @@
 import React from 'react';
 import Svg from '../components/Svg';
 
-const svgToPngUrl = (svgBlob) =>
-  new Promise((resolve) => {
+const svgToPngUrl = (svgBlob, width, height) =>
+  new Promise((resolve, reject) => {
     const image = new Image();
     image.onload = () => {
       let canvas = document.createElement('canvas');
-      canvas.width = image.width;
-      canvas.height = image.height;
+      canvas.width = width;
+      canvas.height = height;
       const context = canvas.getContext('2d');
-      context.drawImage(image, 0, 0, image.width, image.height);
+      context.drawImage(image, 0, 0, width, height);
       resolve(canvas.toDataURL());
     };
-    image.onerror = console.error;
+    image.onerror = reject;
     image.src = window.URL.createObjectURL(svgBlob);
   });
 
@@ -24,12 +24,14 @@ const downloadImage = async (event) => {
   const blob = new Blob([svgDoc.outerHTML], {
     type: 'image/svg+xml;charset=utf-8',
   });
-  let url = '';
-  if (type === 'png') {
-    url = await svgToPngUrl(blob);
-  } else {
-    url = window.URL.createObjectURL(blob);
-  }
+  let url =
+    type === 'png'
+      ? (await svgToPngUrl(
+          blob,
+          svgDoc.viewBox.baseVal.width,
+          svgDoc.viewBox.baseVal.height,
+        ))
+      : window.URL.createObjectURL(blob);
   a.href = url;
   a.download = `thisisme.${type}`;
   a.click();

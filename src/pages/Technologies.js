@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { GlobalStateContext } from '../components/GlobalState';
-import { NavigationButton } from '../components/Navigation';
 import createNotes from '../components/Notes';
 
 const Notes = () => createNotes(['comma separated example: Docker, Git, ...']);
@@ -30,7 +29,7 @@ export default () => {
           onChange={onTechnologyChange}
         />
         <p>
-          <NavigationButton to="education" content="Next" />
+          <a href="#education">Next</a>
         </p>
       </div>
       <div className="section">
