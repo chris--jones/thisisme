@@ -57,7 +57,7 @@ export default () => {
           onChange={onCertificatesChange}
         />
         <p>
-          <a href="#result">Result</a>
+          <a className="button" href="#result">Result</a>
         </p>
         <p>each form corresponds to each inner card.</p>
       </div>

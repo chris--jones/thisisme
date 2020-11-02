@@ -57,7 +57,7 @@ export default () => {
           onChange={onEducationChange}
         />
         <p>
-          <a href="#job">Next</a>
+          <a className="button" href="#job">Next</a>
         </p>
         <p>each form corresponds to each inner card.</p>
       </div>

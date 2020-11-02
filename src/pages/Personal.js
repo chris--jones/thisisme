@@ -56,7 +56,7 @@ export default () => {
           onChange={onPersonalChange}
         />
         <p>
-          <a href="#programming">Next</a>
+          <a className="button" href="#programming">Next</a>
         </p>
       </div>
       <div className="section">

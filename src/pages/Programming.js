@@ -33,7 +33,7 @@ export default () => {
           onChange={onProgrammingChange}
         />
         <p>
-          <a href="#technologies">Next</a>
+          <a className="button" href="#technologies">Next</a>
         </p>
       </div>
       <div className="section">

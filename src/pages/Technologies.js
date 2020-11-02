@@ -29,7 +29,7 @@ export default () => {
           onChange={onTechnologyChange}
         />
         <p>
-          <a href="#education">Next</a>
+          <a className="button" href="#education">Next</a>
         </p>
       </div>
       <div className="section">
