@@ -17,9 +17,10 @@
 I was not happy with the direction of the original project due to the code design & approach, unused dependencies and introduction of additional unnecessary concerns such as sass css and docker.
 
 This refactor features:
-* Only dependencies are react and react-dom, local dev and build are accomplished using [Parcel](https://parceljs.org/)
-* Global state and navigation are achieved using react context
+* Only dependencies are react and react-dom, local dev and production build are accomplished using [Parcel](https://parceljs.org/).
+* Global state and navigation are achieved using react context.
 * Dynamic svg image output with an svg component that adapts to filled in parts of the form.
+* Mobile responsiveness via css media queries.
 
 ## 🕹 How to use?
 To use this app, first install the app locally. 
@@ -32,7 +33,7 @@ Cool right?
 
 You can download generated images and use them in your Github readme file.
 
-## 🏠 App's Homepage - [thisisme](chris--jones.github.io/thisisme/)
+## 🏠 App's Homepage - [thisisme](https://chris--jones.github.io/thisisme/)
 Currently, the app is not deployed from the last commit. So the app may not be up to date. Please install the app locally to see it in action.
 
 > This app is currently under development.
