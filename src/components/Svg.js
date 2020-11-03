@@ -53,7 +53,6 @@ export default () => {
   const paddingY = 50;
   const sectionHeight = 200;
   const sectionWidth = 450;
-  const [scaleRatio, setScaleRatio] = useState(1);
   const [globalState] = useContext(GlobalStateContext);
   const stateArray = Object.entries(globalState)
     .filter(
@@ -71,16 +70,10 @@ export default () => {
   const totalHeight = (sectionHeight + margin) * sections.length + margin;
   const totalWidth = sectionWidth * 2 + margin * 3;
   const fullWidth = sectionWidth * 2 + margin;
-  useEffect(() => {
-    setScaleRatio(
-      ((document.querySelector('main') || {}).offsetHeight - buffer) /
-        totalHeight,
-    );
-  }, []);
   return (
     <svg
-      width={totalWidth * scaleRatio || 0}
-      height={totalHeight * scaleRatio || 0}
+      width={totalWidth || 0}
+      height={totalHeight || 0}
       viewBox={`0 0 ${totalWidth} ${totalHeight}`}
       preserveAspectRatio="xMidYMid meet"
       xmlns="http://www.w3.org/2000/svg"

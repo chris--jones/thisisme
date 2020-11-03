@@ -1,151 +1,169 @@
 body {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: Inter, 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif;
 }
 
 ul {
-	list-style: none;
-	padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
-button, a.button {
-	cursor: pointer;
-	display: inline-block;
-	background-color: #3375f0;
-	text-decoration: none;
-	color: #fff;
-	font-weight: bold;
-	border: 0;
-	border-radius: 4px;
-	padding: 0.5rem 1rem;
+button,
+a.button {
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #3375f0;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  border: 0;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
 }
 
 button:hover {
-	background-color: #5088f2;
+  background-color: #5088f2;
 }
 
-a, button.link {
-	color: #3375f0;
-	cursor: pointer;
-	text-decoration: underline;
-	font-weight: normal;
-	font-size: inherit;
-	display: inline;
-	background: none;
-	border: 0;
-	padding: 0;
+a,
+button.link {
+  color: #3375f0;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: normal;
+  font-size: inherit;
+  display: inline;
+  background: none;
+  border: 0;
+  padding: 0;
 }
 
 p {
-	color: #707070;
-	font-size: 0.75rem;
+  color: #707070;
+  font-size: 0.75rem;
 }
 
 #root {
-	min-height: 100vh;
-	display: flex;
+  min-height: 100vh;
+  display: flex;
 }
 
 main {
-	flex: 1;
-	padding: 1rem;
-	display: flex;
-	flex-direction: column;
-	overflow-y: auto;
-	max-height: 100vh;
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 100vh;
 }
 
 #sidebar {
-	color: #fff;
-	background: #404040;
+  color: #fff;
+  background: #404040;
 }
-
 #sidebar h2 {
-	background: #000;
+  background: #000;
 }
-
+#sidebar a,
 #sidebar h2 a {
-	font-size: inherit;
-	font-weight: bold;
-	color: #fff;
-	text-decoration: none;
+  font-size: inherit;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
 }
-
 #sidebar a {
-	display: block;
-	text-decoration: none;
-	text-align: left;
-	color: #fff;
-	border: 0;
-	font-weight: normal;
-	font-size: 18px;
-	background: none;
-	padding: 1rem 2rem;
+  display: block;
+  text-align: left;
+  border: 0;
+  font-size: 18px;
+  padding: 1rem 2rem;
 }
-
 #sidebar li {
-	position: relative;
+  position: relative;
 }
-
 #sidebar a:hover {
-	background: #000;
+  background: #000;
 }
-
 #sidebar a.active::before {
-	content:'';
-	width: 0; 
-	height: 0; 
-	border-top: 4px solid transparent;
-	border-bottom: 4px solid transparent;
-	border-left: 8px solid #fff;
-	display: block;
-	position: absolute;
-	margin-left: -1rem;
-	top: 50%;
-	transform: translateY(-50%);
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 8px solid #fff;
+  display: block;
+  position: absolute;
+  margin-left: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.section:nth-child(n+2) {
-	margin-top: 1rem;
+.section:nth-child(n + 2) {
+  margin-top: 1rem;
 }
-
+.section,
+svg {
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid #c7c7c7;
+}
 .section {
-	display: flex;
-	flex-direction: column;
-	padding: .8rem;
-	border-radius: .5rem;
-	border: 1px solid #c7c7c7;
+  display: flex;
+  flex-direction: column;
 }
-.section input+label {
-	margin-top: 1rem;
+.section input + label {
+  margin-top: 1rem;
 }
-.section label, .section .label {
-	color: #3375f0;
+.section label,
+.section .label {
+  color: #3375f0;
 }
 .section label span {
-	color: #5a5858;
-	font-size: .8rem;
+  color: #5a5858;
+  font-size: 0.8rem;
 }
 .section input {
-	font-family: inherit;
-	padding: 0.8rem;
-	margin-top: .4rem;
-	border: 1px solid #dbdbdb;
-	outline: none;
+  font-family: inherit;
+  padding: 0.8rem;
+  margin-top: 0.4rem;
+  border: 1px solid #dbdbdb;
+  outline: none;
 }
 .section p:last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
-
 .section input:focus {
-	border: 1px solid #858585;
+  border: 1px solid #858585;
+}
+.notes li::before {
+  content: '*';
+  color: red;
+  display: inline-block;
+  width: 1rem;
 }
 
-.notes li::before {
-	content: '*';
-	color: red;
-	display: inline-block;
-	width: 1rem;
+svg {
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 400px) {
+  #root {
+    flex-direction: column;
+  }
+  #sidebar {
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+  #sidebar h2 a, #sidebar a {
+    font-size: 16px;
+  }
+  #sidebar h2,
+  #sidebar ul,
+  #sidebar li {
+    display: inline-block;
+    margin: 0;
+  }
 }
