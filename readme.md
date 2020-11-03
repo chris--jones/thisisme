@@ -13,6 +13,14 @@
 ### TLDR;
 > Create cool images containing useful information about you and your work for your GitHub readme.
 
+## ❓ Why this fork?
+I was not happy with the direction of the original project due to the code design & approach, unused dependencies and introduction of additional unnecessary concerns such as sass css and docker.
+
+This refactor features:
+* Only dependencies are react and react-dom, local dev and build are accomplished using [Parcel](https://parceljs.org/)
+* Global state and navigation are achieved using react context
+* Dynamic svg image output with an svg component that adapts to filled in parts of the form.
+
 ## 🕹 How to use?
 To use this app, first install the app locally. 
 1. Click the Start button on the homepage.
@@ -24,8 +32,8 @@ Cool right?
 
 You can download generated images and use them in your Github readme file.
 
-## 🏠 App's Homepage - [thisisme](https://thisisme.vercel.app/)
-Currently, the app is not deployed from the last commit. So the app may not create cool images. Please install the app locally to see it in action.
+## 🏠 App's Homepage - [thisisme](chris--jones.github.io/thisisme/)
+Currently, the app is not deployed from the last commit. So the app may not be up to date. Please install the app locally to see it in action.
 
 > This app is currently under development.
 
@@ -33,7 +41,7 @@ Currently, the app is not deployed from the last commit. So the app may not crea
 
 First clone this repository:
 ```sh
-git clone https://github.com/JoseDeFreitas/thisisme.git
+git clone https://github.com/chris--jones/thisisme.git
 cd thisisme
 ```
 Install dependencies:
